@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://paymentplan.learnersuae.com/wp-content/themes/Payment/assets/css/payment-plan.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>Payment Plan</title>
+  </head>
+  <body>
+
+</head>
+<body id="content">
+               <form method="post" name="paymentPlan">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <img src="https://agcedu.github.io/agclogo/" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="container pt-3">
+               <div class="form-row">
+                   <div class="col-md-6">
+                       <div class="form-group">
+                           <label for="input1">Name:</label>
+                           <input type="text" id="input1" name="input1" class="form-control" required>
+                       </div>
+                   </div>
+                   <div class="col-md-6">
+                       <div class="form-group">
+                           <label for="input2">Program:</label>
+                           <select id="input2" name="input2" class="form-control" required>
+                               <option value="" selected>--Choose--</option>
+                               <option value="Level-3" >Level 3</option>
+                               <option value="Level-4" >Level 4</option>
+                               <option value="Level-5" >Level 5</option>
+                               <option value="Level-6" >Level 6</option>
+                               <option value="Level-7" >Level 7</option>
+                               <option value="Extended Level-5">Extended Level 5</option>
+                           </select>
+                           <!-- <input type="text" id="input2" name="input2" class="form-control"> -->
+                       </div>
+                   </div>
+               </div>
+               <div class="form-row">
+                   <div class="col-md-4">
+                       <div class="form-group">
+                           <label for="specialization">Specialization:</label>
+                           <input type="text" id="specialization" name="specialization" class="form-control">
+                       </div>
+                   </div>
+                   <div class="col-md-4">
+                       <div class="form-group">
+                           <label for="select3">VAT:</label>
+                           <select id="select3" name="select3" class="form-control" required>
+                               <option value="">--Choose--</option>
+                               <option value="0">0</option>
+                               <option value="5">5</option>
+                           </select>
+                       </div>
+                   </div>
+                   <div class="col-md-4">
+                      <div class="form-group">
+                          <label for="input2">Date:</label>
+                          <input type="text" id="input2_2" name="input2_2" class="form-control" required>
+                      </div>
+                  </div>
+               </div>
+               
+               
+    </div>
+</div>
+<!-- Add a div with an id to contain the Reference input field -->
+<div id="referenceField" class="col-md-6" style="display: none;">
+    <div class="form-group">
+        <label for="inputRef">Reference</label>
+        <input type="text" id="inputRef" name="inputRef" class="form-control">
+    </div>
+</div>
+<div id="b2cField" class="col-md-6" style="display: none;">
+    <div class="form-group">
+        <label for="b2c">Reference</label>
+        <input type="text" id="b2c" name="b2c" class="form-control">
+    </div>
+</div>
+                </div>
+           
+       </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" id="semesterWrapper">
+
+      <table id="myTable_1715238346" class="mytable">
+            <tr>
+                <th class="color">Instalment</th>
+                <th class="color">Due Date</th>
+                <th class="color">Fees</th>
+                <th class="color">VAT</th>
+                <th class="color">Total Amount</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="insta[]" value="Registration Fees" class="text-center"></td>
+                <!-- <td><input type="date" name="date[]"></td> -->
+                <td><input type="date" name="date[]" id="" class="text-center" required></td>
+
+
+                <td>AED<input type="text" name="fees[]" required></td>
+                <td>AED<input type="text" name="vat[]" class="vat-column"></td>
+                <td>AED<input type="text"name="total[]"></td>
+            </tr>
+
+            <!--<tr class="footer-row1">-->
+            <!--    <td class="font-weight-bold">Admin + Transcript Fee</td>-->
+            <!--    <td class="font-weight-bold"><input type="date" name="thesis_date" required><span></span></td>-->
+            <!--    <td class="font-weight-bold">AED <input type="text" name="thesis_fees" required><span></span></td>-->
+            <!--    <td class="font-weight-bold">AED <input type="text" name="thesis_vat"><span></span></td>-->
+            <!--    <td class="font-weight-bold">AED <input type="text" name="thesis_amount"><span></span></td>-->
+            <!--</tr>-->
+            <tr class="footer-row2">
+                <td class="font-weight-bold">Final Degree Application</td>
+                <td class="font-weight-bold"><input type="date" name="admission_date" value="2024-05-09" required><span></span></td>
+                <td class="font-weight-bold">AED <input type="text" name="admission_fees" value="500" readOnly onkeydown="return event.key != 'Enter';" required><span></span></td>
+                <td class="font-weight-bold">AED <input type="text" name="admission_vat" onkeydown="return event.key != 'Enter';"><span></span></td>
+                <td class="font-weight-bold">AED <input type="text" name="admission_amount" onkeydown="return event.key != 'Enter';"><span></span></td>
+            </tr>
+            <tr class="footer-row">
+                <td class="font-weight-bold">TOTAL</td>
+                <td></td>
+                <td class="font-weight-bold" ><input type="text" id="total_fees" name="total_fees" onkeydown="return event.key != 'Enter';"><span></span></td>
+                <td class="font-weight-bold">AED <input type="text" id="total_vat" name="total_vat" onkeydown="return event.key != 'Enter';"><span></span></td>
+                <td class="font-weight-bold">AED <input type="text" id="total_amount" name="total_amount" onkeydown="return event.key != 'Enter';"><span></span></td>
+            </tr>
+
+            <div class="controls">
+                <i class="fas fa-plus-circle icon"></i>
+                <i class="fas fa-minus-circle icon-minus" id="hide2"></i>
+            </div>
+
+        </table>
+
+      </div>
+
+     <div class="container pt-3">
+         <div class="dashed-border">
+             <textarea rows="3" cols="50" name="comment"></textarea>
+             <!-- <div class="input-container"> -->
+                <div class="flex-wrap">
+                     <div class="input-inner">
+                         <input type="text" name="signature" onkeydown="return event.key != 'Enter';">
+                         <p>Student Signature</p>
+                     </div>
+                     <div class="input-inner">
+                         <input type="text" name="luc_sign" onkeydown="return event.key != 'Enter';">
+                         <p>For and behalf of LUC</p>
+                     </div>
+                 </div>
+             <!-- </div> -->
+         </div>
+     </div>
+         <div class="col-md-12 university text-center" id="hide3">
+           <button type="submit" name="submit" id="download">GENERATE PDF</button>
+         </div>
+    </div>
+  </div>
+  </form>
+  <form method="POST">
+    <input type="hidden" name="filename">
+      <div class="col-md-12 university text-center" id="hide3">
+           <!-- <button type="submit" name="download">Download PDF</button> -->
+           <input type="submit" class="btn btn-danger" name="download-pdf" id="download-pdf" style="display:none" value="Download PDF" onclick=resetForm() >
+         </div>
+  </form>
+    
+    
+    <div id="htmlOutput" style="display:none">
+        
+    </div>
+
+
+	<script>
+	    $(document).ready(function() {
+    $('#myTable input').keydown(function(e) {
+        if (e.keyCode == 13) { // Check if Enter key is pressed
+            e.preventDefault(); // Prevent the default action
+            return false; // Stop the event from propagating
+        }
+    });
+});
+
+	</script>
+	<script>
+    function resetForm() {
+        document.paymentPlan.reset();
+         location.reload();
+    }
+</script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://paymentplan.learnersuae.com/wp-content/themes/Payment/assets/js/payment-othm.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script>
+        $("form[name=paymentPlan]").on('submit',function(e){
+            // e.preventDefault()
+            e.stopPropagation()
+            const data = $(this).serializeArray()
+            let submissionData = {}
+            submissionData['installment'] = []
+            let instaCount = 0
+            let dateCount = 0
+            let feesCount = 0
+            let vatCount = 0
+            let totalCount = 0
+            _.mapKeys(data,function(value){
+                if(value.name==="insta[]" || value.name==="date[]" || value.name==="fees[]" || value.name==="vat[]" || value.name==="total[]"){
+                    if(value.name==="insta[]"){
+                        if(!_.isObject(submissionData['installment'][instaCount])){
+                            submissionData['installment'][instaCount] = {}
+                        }
+                        submissionData['installment'][instaCount]['insta'] = value.value
+                        instaCount++
+                    }
+                    if(value.name==="date[]"){
+                        if(!_.isObject(submissionData['installment'][dateCount])){
+                            submissionData['installment'][dateCount] = {}
+                        }
+                        submissionData['installment'][dateCount]['date'] = value.value
+                        dateCount++
+                    }
+                    if(value.name==="fees[]"){
+                        if(!_.isObject(submissionData['installment'][feesCount])){
+                            submissionData['installment'][feesCount] = {}
+                        }
+                        submissionData['installment'][feesCount]['fees'] = value.value
+                        feesCount++
+                    }
+                    if(value.name==="vat[]"){
+                        if(!_.isObject(submissionData['installment'][vatCount])){
+                            submissionData['installment'][vatCount] = {}
+                        }
+                        submissionData['installment'][vatCount]['vat'] = value.value
+                        vatCount++
+                    }
+                    if(value.name==="total[]"){
+                        if(!_.isObject(submissionData['installment'][totalCount])){
+                            submissionData['installment'][totalCount] = {}
+                        }
+                        submissionData['installment'][totalCount]['total'] = value.value
+                        totalCount++
+                    }
+                } else {
+                    submissionData[value.name]=value.value   
+                }
+            })
+            console.log(submissionData)
+            $.post("https://paymentplan.learnersuae.com/wp-content/themes/Payment/payment-File-othm.php",submissionData)
+            .done(function( data ) {
+                var filename = data.trim();
+                $('input[name="filename"]').val(filename);
+                $("#download").hide();
+                $("#download-pdf").show();
+                $("#htmlOutput").html(data)
+              });
+            return false
+        })
+        
+        	$(document).ready(function () {
+    // select element
+    $('#inputSource').on('change', function () {
+        var selectedOption = $(this).val();
+        var referenceField = $('#referenceField');
+        var b2cField = $('#b2cField')
+        var inputRef = $('#inputRef'); //reference to the inputRef field
+        var b2c = $('#b2c') //reference to the b2c field
+
+        // Check if the selected option is "Reference"
+        if (selectedOption === 'Reference') {
+            referenceField.show(); // Show the Reference field
+            inputRef.prop('required', true); // Add the required attribute
+            
+            // hide b2c field here
+            b2cField.hide();
+            b2c.prop('required', false)
+        }else if (selectedOption === 'b2c') {
+            b2cField.show();
+            b2c.prop('required', true)
+            
+            // hide reference field in b2c
+            referenceField.hide();  
+            inputRef.prop('required', false);
+        }
+        else {
+            referenceField.hide(); // Hide the Reference field for other options
+            inputRef.prop('required', false); // Remove the required attribute
+            b2cField.hide();
+            b2c.prop('required', false)
+        }
+    });
+});
+$('#download-pdf').on('click', function() {
+    // Reset the form and change button visibility here if needed
+    document.paymentPlan.reset();
+    $("#download").show();
+    $("#download-pdf").hide();
+    // Optional: Reload the page if necessary
+    // location.reload();
+});
+
+    </script>
+
+  </body>
+</html>
+
+
+
