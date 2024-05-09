@@ -1,0 +1,479 @@
+html{
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+
+img{
+	width: 100%;
+	height: auto;
+
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+  font-family: 'Mulish', sans-serif;
+}
+a:hover{
+	text-decoration: none;
+}
+input{
+	text-transform: capitalize;
+}
+.logo-luc{
+	width: 300px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    padding-top: 50px;
+}
+.bg{
+    position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-image: url('https://agcedu.github.io/agclogo/agc.png');
+        background-size: cover;
+        background-position: center;
+        filter: blur(3px); /* This will blur the background */
+}
+.buttons-link{
+	z-index: 1;
+	position: relative;
+	text-align: center;
+}
+.buttons {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Center buttons vertically */
+    padding: 30px;
+    gap: 15px; /* Add space between buttons */
+    margin: 10px;
+    flex-direction: column;
+}
+
+.animated-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px; /* Fixed width */
+    padding: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;  /* Removes underline from link */
+    color: white;
+    background-color: #2AAC62;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.8s ease, transform 0.8s ease; /* Smooth transition */
+}
+
+
+.animated-button:hover {
+    background-color: #0e6c36;
+    color: #ffffff;
+}
+
+.animated-button:active {
+    background-color: #2c3e50;
+    transform: scale(0.95);
+}
+/*Button*/
+
+.buttons-link h1{
+	padding-top: 50px;
+	color: #ffffff;
+	font-size: 50px;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+}
+.color{
+	background-color: #002C5B;
+}
+.color-cmbs{
+	background-color: #221C5C;
+}
+.sunrise-th{
+	background-color: #CF212A;
+}
+
+.footer-row-sunrise{
+	background-color: #CF212A;
+	color: #ffffff;
+}
+.vignan-th{
+	background-color: #0072BC;
+}
+
+
+
+.footer-row{
+	background-color: #002C5B;
+	color: #ffffff;
+}
+.footer-row td input{
+	background-color: #002C5B;
+	color: #ffffff;
+}
+.footer-row-cmbs{
+	background-color: #221C5C;
+	color: #ffffff;
+}
+.footer-row-cmbs td input{
+	background-color: #221C5C;
+	color: #ffffff;
+}
+.footer-row-sunrise td input{
+	background-color: #CF212A;
+	color: #ffffff;
+}
+.footer-row-vignan{
+	background-color: #0072BC;
+	color: #ffffff;
+}
+.footer-row-vignan td input{
+	background: #0072BC;
+	color: #ffffff;
+}
+/*.footer-row td input{
+	background-color: #002C5B;
+	color: #ffffff;
+}*/
+.font-weight-bold input{
+	text-align: center;
+	font-weight: bold;
+}
+.full-td{
+/*	width: 30%;*/
+}
+.full-td-insta{
+	width: 40%;
+}
+
+.fixed-buttons {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sem-btn{
+	padding: 10px;
+	    margin: 20px;
+	    background: #CF212A;
+	    border: none;
+	    border-radius: 20px;
+	    color: #ffffff;
+	    text-align: center;
+}
+.vignan-sem-btn{
+	padding: 10px;
+    margin: 20px;
+    background: #0072BC;
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+.vignan-sem-btn-wrapper{
+	text-align: center;
+}
+.sem-btn-wrapper{
+	text-align: center;
+}
+
+/*.container input {
+        border: none;
+        background-color: #ececec;
+        outline: none;
+        padding: 10px;
+        width: 80%;
+        box-sizing: border-box;
+        margin-top: 5px;
+    }
+    .container select {
+        border: none;
+        background-color: #ececec;;
+        outline: none;
+        padding: 10px;
+        width: 80%;
+        box-sizing: border-box;
+        margin-top: 5px;
+    }*/
+		th {
+	        color: #ffffff;
+/*	        background-color: #D92B2B;*/
+	        border: 1px solid #000000;
+	        text-align: center;padding: 10px;
+	    }
+	    td {
+        border: 1px solid #000000;
+        text-align: center;
+/*        padding: 5px;*/
+			padding-top: 10px;
+			padding-bottom: 10px;
+    	}
+	    table {
+	        width: 100%;
+	        border-collapse: collapse;
+	        border: 1px solid #000000;
+	        margin: auto;
+	    }
+	    td:last-child {
+	        position: relative;
+/*	        padding: 20px;*/
+	    }
+
+	    .icon {
+	        position: absolute;
+	        right: -30px; /* Adjust this value to move the icon closer or farther from the cell */
+	        top: 50%;
+	        transform: translateY(-50%);
+	        color: gray;
+	        cursor: pointer;
+	        display: none;
+	    }
+
+	    td:last-child:hover ~ .icon {
+	        display: block;
+	    }
+	    .icon-minus {
+	        position: absolute;
+	        right: -60px; /* Adjust this value to move the icon closer or farther from the cell */
+	        top: 50%;
+	        transform: translateY(-50%);
+	        color: gray;
+	        cursor: pointer;
+	        display: none;
+	    }
+	    td:last-child:hover ~ .icon-minus {
+	        display: block;
+	    }
+	    .icon-minus-cmbs {
+	        position: absolute;
+	        right: -60px; /* Adjust this value to move the icon closer or farther from the cell */
+	        top: 50%;
+	        transform: translateY(-50%);
+	        color: gray;
+	        cursor: pointer;
+	        display: none;
+	    }
+	    td:last-child:hover ~ .icon-minus-cmbs {
+	        display: block;
+	    }
+		/*	Sunrise    */
+		.icon-sunrise {
+		    position: absolute;
+		    right: -30px; /* Adjust this value to move the icon closer or farther from the cell */
+		    top: 50%;
+		    transform: translateY(-50%);
+		    color: gray;
+		    cursor: pointer;
+		    display: none;
+		}
+		.icon-sunrise-level{
+			position: absolute;
+			right: -30px; /* Adjust this value to move the icon closer or farther from the cell */
+			top: 50%;
+			transform: translateY(-50%);
+			color: gray;
+			cursor: pointer;
+			display: none;
+		}
+		.icon-sunrise-level-bba{
+			position: absolute;
+			right: -30px; /* Adjust this value to move the icon closer or farther from the cell */
+			top: 50%;
+			transform: translateY(-50%);
+			color: gray;
+			cursor: pointer;
+			display: none;
+		}
+		.icon-sunrise-ssm{
+			position: absolute;
+			right: -30px; /* Adjust this value to move the icon closer or farther from the cell */
+			top: 50%;
+			transform: translateY(-50%);
+			color: gray;
+			cursor: pointer;
+			display: none;
+		}
+		.icon-minus-sunrise-level-bba {
+		    position: absolute;
+		    right: -60px; /* Adjust this value to move the icon closer or farther from the cell */
+		    top: 50%;
+		    transform: translateY(-50%);
+		    color: gray;
+		    cursor: pointer;
+		    display: none;
+		}
+		.icon-minus-sunrise-ssm {
+		    position: absolute;
+		    right: -60px; /* Adjust this value to move the icon closer or farther from the cell */
+		    top: 50%;
+		    transform: translateY(-50%);
+		    color: gray;
+		    cursor: pointer;
+		    display: none;
+		}
+
+		td:last-child:hover ~ .icon-sunrise {
+		    display: block;
+		}
+		td:last-child:hover ~ .icon-sunrise-level {
+		    display: block;
+		}
+		.icon-minus-sunrise {
+		    position: absolute;
+		    right: -60px; /* Adjust this value to move the icon closer or farther from the cell */
+		    top: 50%;
+		    transform: translateY(-50%);
+		    color: gray;
+		    cursor: pointer;
+		    display: none;
+		}
+		.icon-minus-sunrise-level {
+		    position: absolute;
+		    right: -60px; /* Adjust this value to move the icon closer or farther from the cell */
+		    top: 50%;
+		    transform: translateY(-50%);
+		    color: gray;
+		    cursor: pointer;
+		    display: none;
+		}
+		td:last-child:hover ~ .icon-minus-sunrise-level {
+		    display: block;
+		}
+		td:last-child:hover ~ .icon-minus-sunrise {
+		    display: block;
+		}
+	    .university button{
+	    	background-color: #D92B2C;
+	    	color: #ffffff;
+	    	border-radius: 30px;
+	    	text-align: center;
+	    	border: none;
+	    	padding: 10px;
+	    	width: 25%;
+/*	    	margin-bottom: 5%;*/
+	    	font-size: 20px;
+	    	font-weight: bold;
+	    }
+	    .vignan-university button{
+	    	background-color: #0072BC;
+	    	color: #ffffff;
+	    	border-radius: 30px;
+	    	text-align: center;
+	    	border: none;
+	    	padding: 10px;
+	    	width: 25%;
+/*	    	margin-bottom: 5%;*/
+	    	font-size: 20px;
+	    	font-weight: bold;
+	    }
+/*New*/
+
+
+        .form-row {
+            display: flex;
+            justify-content: start;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        .form-row label {
+            width: 100px;
+            margin-right: 10px;
+            text-align: right;
+            display: flex;
+/*            justify-content: center;*/
+            align-items: center;
+        }
+        .form-row .form-group {
+        	display: flex;
+            flex: 1;
+        }
+        .form-row select, .form-row input {
+            width: 100%;
+            border: none;
+            background-color: #ececec;
+        }
+        .mytable input{
+        	border: none;
+        }
+        .mytable-level input{
+        	border: none;
+        }
+        .mytable-bba input{
+        	border: none;
+        }
+
+        .dashed-border {
+            border: 1px dashed #000;
+            padding: 10px;
+            margin-bottom: 20px;
+            position: relative;
+            text-align: center;
+            border-radius: 20px;
+          }
+          .dashed-border textarea {
+              width: 100%;
+              border: none;
+              background-color: #ececec;
+              padding: 10px;
+          }
+          .flex-wrap{
+          	display: flex;
+          	justify-content: space-between;
+          	align-content: center;
+          	padding: 10px;
+          }
+          .input-inner input{
+          	height: 50px;
+          	padding: 10px;
+          }
+          .controls{
+          	position: relative;
+          }
+          .data-row-othm input{
+          	border: none;
+          }
+          .data-row input{
+          	border: none;
+          }
+          #special-othm input,#special-othm1 input,#special-othm2 input{
+          	border: none;
+          }
+          .sp input{
+          	border: none;
+          }
+          
+          .date-col {
+              min-width:90px;
+          }
+
+/* OTHM + SSM */
+.mytable-level .sunrise-th{
+	background-color: #2C4060;
+}
+.mytable-bba .sunrise-th{
+	background-color: #2C4060;
+}
+.ssm-mba .sunrise-th{
+	background-color: #2C4060;
+}
+.ssm-mba .footer-row-sunrise{
+	background-color: #2C4060;
+}
